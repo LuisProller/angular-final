@@ -1,1 +1,8 @@
-<p>lista-filmes works!</p>
+<a *ngFor="let filme of (filmes$ | async)" href="{{ filme.url }}" target="_blank" rel="noreferrer">
+  <p-card [header]="filme.titulo" [subheader]="filme.sinopse"
+    [style]="{width: '100%', height: '100%', display: 'block'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+      <img alt="{{ filme.sinopse }}" src="{{ filme.imagem }}" />
+    </ng-template>
+  </p-card>
+</a>
