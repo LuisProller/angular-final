@@ -7,6 +7,10 @@ import * as express from 'express';
 
 import { MongoClient } from 'mongodb';
 
+import * as cors from 'cors';
+
+import { router as filmesRoute } from './app/routes/filmes';
+
 MongoClient.connect(
   'mongodb://angular-final-2022_devcontainer-db-1/:27017',
 ).then((client: MongoClient) => {
@@ -18,9 +22,13 @@ MongoClient.connect(
 
 const app = express();
 
+app.use(cors());
+
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to api!' });
 });
+
+app.use('/api/filmes', filmesRoute);
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {
