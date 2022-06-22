@@ -1,0 +1,41 @@
+use('app-filmes');
+
+db.filmes.drop();
+
+db.filmes.insertMany([
+  {
+    '_id': 1,
+    'cartaz': 'https://cinema10.com.br/upload/filmes/filmes_12810_01-1.jpg',
+    'titulo': 'Jurassic World: Domínio',
+    'sinopse': 'Quatro anos após os acontecimentos de Jurassic World 2 - Reino Ameaçado (2018), em que uma conspiração distribuiu espécies de dinossauros geneticamente modificadas pelo mundo, os humanos precisam aprender a dividir o planeta com as criaturas mais temíveis e lendárias de todos os tempos, ressignificando a própria existência e fugindo de perigos constantes que ameaçam a civilização.',
+    'url': 'https://cinema10.com.br/filme/jurassic-world-3',
+  },
+  {
+    '_id': 2,
+    'cartaz': 'https://cinema10.com.br/upload/filmes/filmes_15495_lightyear.jpg',
+    'titulo': 'Lightyear',
+    'sinopse': 'A história de origem do patrulheiro espacial Buzz Lightyear (Chris Evans), que deu origem ao brinquedo de Toy Story. No filme, Buzz e sua equipe são abandonados em um planeta a 4,2 milhões de anos-luz do planeta Terra. Através das leis do espaço e tempo, ele tentará encontrar uma forma de voltar para casa. Para isso, contará com a ajuda de um grupo de recrutas e um gato-robô. Para piorar a dificuldade da missão, eles encontrarão o vilão Zurg que chegou ao mesmo planeta para cumprir um compromisso misterioso.',
+    'url': 'https://cinema10.com.br/filme/lightyear',
+  },
+  {
+    '_id': 3,
+    'cartaz': 'https://cinema10.com.br/upload/filmes/filmes_15387_fpwmyzlxsai1t1n.jpg',
+    'titulo': 'O Homem do Norte',
+    'sinopse': 'Na Islândia, no período de virada do século X, o pequeno príncipe nórdico Amleth (Oscar Novak) presencia o assassinato de seu pai, o rei Aurvandil (Ethan Hawke). Temendo pela própria vida, ele foge sem rumo em uma canoa. Agora adulto, Amlet (Alexander Skarsgård) trama um plano de vingança contra aqueles que traíram sua família no passado.',
+    'url': 'https://cinema10.com.br/filme/the-northman',
+  },
+  {
+    '_id': 4,
+    'cartaz': 'https://cinema10.com.br/upload/filmes/filmes_15056_14496-medio.jpg',
+    'titulo': 'Até a Morte: Sobreviver é a Melhor Vingança',
+    'sinopse': 'Em um plano de vingança doentio, criminosos invadem uma casa e matam um homem, deixando sua esposa, Emma (Megan Fox), algemada ao corpo. Presa dentro de um quarto e incapaz de se soltar, ela precisa descobrir uma forma de sobreviver quando dois assassinos chegam para terminar o serviço e eliminar todas as provas do crime.',
+    'url': 'https://cinema10.com.br/filme/till-death',
+  },
+  {
+    '_id': 5,
+    'cartaz': 'https://cinema10.com.br/upload/filmes/filmes_16266_download-easy-resize.com.jpg',
+    'titulo': 'Crimes do Futuro',
+    'sinopse': 'À medida que a espécie humana se adapta a um ambiente sintético, o corpo sofre novas alterações. Com a ajuda de parceira Caprice (Léa Seydoux), o artista problemático Saul Tenser (Viggo Mortensen) mostra publicamente a metamorfose de seus órgãos em performances. Enquanto isso, Timlin (Kristen Stewart), uma investigadora do National Organ Registry, rastreia obsessivamente seus movimentos, ela pretende fazer uma descoberta sobre a próxima fase da evolução humana.',
+    'url': 'https://cinema10.com.br/filme/crimes-do-futuro',
+  },
+]);
