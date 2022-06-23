@@ -19,7 +19,14 @@ export class FilmeEdicaoService {
 
   public get(id: number): Observable<IFilme> {
     return this.httpClient.get<IFilme>(
-      `http://localhost:3333/api/filmes/${id}`,
+      `/api/filmes/${id}`,
+    );
+  }
+
+  public put(filme: IFilme): Observable<string> {
+    return this.httpClient.put<string>(
+      `/api/filmes/${filme._id}`,
+      filme,
     );
   }
 

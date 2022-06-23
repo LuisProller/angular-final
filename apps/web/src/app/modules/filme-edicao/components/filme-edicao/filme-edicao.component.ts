@@ -67,12 +67,7 @@ export class FilmeEdicaoComponent implements OnInit {
       this.filmeEdicaoService.get(id).pipe(
         takeUntil(this.subDestruction),
       ).subscribe((f: IFilme) => {
-        this.formGroup.setValue({
-          titulo: f.titulo,
-          sinopse: f.sinopse,
-          cartaz: f.cartaz,
-          url: f.url,
-        });
+        this.formGroup.setValue(f);
       });
     });
   }
@@ -82,7 +77,7 @@ export class FilmeEdicaoComponent implements OnInit {
     this.subDestruction.complete();
   }
 
-  public enviarForm(json: unknown) {
-
+  public enviarForm(json: IFilme) {
+    this.filmeEdicaoService.put(json).subscribe();
   }
 }

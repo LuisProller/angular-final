@@ -1,11 +1,11 @@
-<div class="card">
+<form (ngSubmit)="enviarForm(formGroup.value)" [formGroup]="formGroup" class="card">
   <h5>Editar filme</h5>
 
   <div class="field">
     <label for="titulo">
       Título
     </label>
-    <input pInputText [formControl]="titulo" autofocus id="titulo" type="text"
+    <input pInputText formControlName="titulo" autofocus id="titulo" type="text"
       placeholder="Ex.: O exterminador do futuro"
       class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
     <small>
@@ -17,7 +17,7 @@
     <label for="sinopse">
       Sinopse
     </label>
-    <input pInputText [formControl]="sinopse" id="sinopse" type="text" placeholder="Ex.: resumo da história do filme"
+    <input pInputText formControlName="sinopse" id="sinopse" type="text" placeholder="Ex.: resumo da história do filme"
       class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
     <small>
       Sinopse do filme
@@ -28,7 +28,7 @@
     <label for="cartaz">
       URL do cartaz
     </label>
-    <input pInputText [formControl]="cartaz" id="cartaz" type="text"
+    <input pInputText formControlName="cartaz" id="cartaz" type="text"
       placeholder="Ex.: https://cinema10.com.br/upload/filmes/filmes_1398_avatar-2-poster-filme.jpg"
       class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
     <small>
@@ -40,7 +40,7 @@
     <label for="url">
       URL do filme
     </label>
-    <input pInputText [formControl]="url" id="url" type="text"
+    <input pInputText formControlName="url" id="url" type="text"
       placeholder="Ex.: https://cinema10.com.br/filme/avatar-2-navi"
       class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
     <small>
@@ -48,7 +48,6 @@
     </small>
   </div>
 
-  <button pButton icon="pi pi-save" label="Salvar" type="button" [disabled]="formGroup.invalid"
-    (click)="enviarForm(formGroup.value)">
+  <button pButton icon="pi pi-save" label="Salvar" type="submit" [disabled]="formGroup.invalid">
   </button>
-</div>
+</form>
