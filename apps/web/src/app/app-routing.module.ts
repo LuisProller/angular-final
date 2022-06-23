@@ -20,8 +20,14 @@ const routes: Routes = [
         redirectTo: 'lista-filmes',
       },
       {
-        path: 'lista-artigos',
+        path: 'lista-filmes',
         component: ListaFilmesComponent,
+      },
+      {
+        path: 'editar-filme',
+        loadChildren: () => import(
+          './modules/filme-edicao/filme-edicao.module'
+        ).then(mod => mod.FilmeEdicaoModule),
       },
     ],
   },
