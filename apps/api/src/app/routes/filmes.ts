@@ -19,3 +19,14 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
   ).find().toArray();
   res.json(filmes);
 });
+
+router.get('/:_id', async (req: Request, res: Response, next: NextFunction) => {
+  const _id: number = +req.params._id;
+  const filme: IFilme = await getCollection<IFilme>(
+    req.app,
+    'filmes',
+  ).findOne({
+    _id: _id,
+  });
+  res.json(filme);
+});

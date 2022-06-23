@@ -17,7 +17,7 @@ export class FilmeService {
 
    public getAll(): Observable<IFilme[]> {
     return this.httpClient.get<IFilme[]>(
-      'http://localhost:3333/api/filmes',
+      '/api/filmes',
     ).pipe(
     );
   }

@@ -1,1 +1,54 @@
-<p>filme-edicao works!</p>
+<div class="card">
+  <h5>Editar filme</h5>
+
+  <div class="field">
+    <label for="titulo">
+      Título
+    </label>
+    <input pInputText [formControl]="titulo" autofocus id="titulo" type="text"
+      placeholder="Ex.: O exterminador do futuro"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    <small>
+      Título do filme, que aparecerá na lista de filme.
+    </small>
+  </div>
+
+  <div class="field">
+    <label for="sinopse">
+      Sinopse
+    </label>
+    <input pInputText [formControl]="sinopse" id="sinopse" type="text" placeholder="Ex.: resumo da história do filme"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    <small>
+      Sinopse do filme
+    </small>
+  </div>
+
+  <div class="field">
+    <label for="cartaz">
+      URL do cartaz
+    </label>
+    <input pInputText [formControl]="cartaz" id="cartaz" type="text"
+      placeholder="Ex.: https://cinema10.com.br/upload/filmes/filmes_1398_avatar-2-poster-filme.jpg"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    <small>
+      Endereço do cartaz que será carregado na lista de filmes.
+    </small>
+  </div>
+
+  <div class="field">
+    <label for="url">
+      URL do filme
+    </label>
+    <input pInputText [formControl]="url" id="url" type="text"
+      placeholder="Ex.: https://cinema10.com.br/filme/avatar-2-navi"
+      class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    <small>
+      Endereço para acesso ao filme.
+    </small>
+  </div>
+
+  <button pButton icon="pi pi-save" label="Salvar" type="button" [disabled]="formGroup.invalid"
+    (click)="enviarForm(formGroup.value)">
+  </button>
+</div>
